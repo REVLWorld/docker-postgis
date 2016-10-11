@@ -1,4 +1,4 @@
-FROM postgres:9.4
+FROM postgres:9.4.5
 MAINTAINER Mike Dillon <mike@appropriate.io>
 
 ENV POSTGIS_MAJOR 2.3
