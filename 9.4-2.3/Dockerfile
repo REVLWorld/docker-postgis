@@ -13,7 +13,7 @@ RUN apt-get update \
 
 RUN mkdir -p /docker-entrypoint-initdb.d
 
-RUN echo "listen_addresses='*'" >> /etc/postgresql/9.4/main/postgresql.conf
-RUN echo "host all all 0.0.0.0/0 md5\n\n\n" >> /etc/postgresql/9.4/main/pg_hba.conf
+RUN echo "listen_addresses='*'" >> /var/lib/postgresql/data/postgresql.conf
+RUN echo "host all all 0.0.0.0/0 md5\n\n\n" >> /var/lib/postgresql/data/pg_hba.conf
 
 COPY ./initdb-postgis.sh /docker-entrypoint-initdb.d/postgis.sh
